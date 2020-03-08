@@ -1,5 +1,6 @@
 <html>
 <head>
+<?php include 'Functions/sessions.php';?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Invetory Management System</title>
@@ -76,20 +77,20 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="Component/dist/img/superadmin.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Administrator</span>
+              <span class="hidden-xs"><?echo $_SESSION['empname'];?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
               <img src="Component/dist/img/superadmin.png" class="img-circle" alt="User Image">
                 <p>
-                  Andi Subroto Kusumo - Andi277
-                  <small>Department: </small>
+                <?echo $_SESSION['empname'];?> - <?echo $_SESSION['username'];?>
+                  <small>Department: <?echo $_SESSION['unit'];?></small>
                 </p>
               </li>
               <li class="user-footer">
                 <div class="pull-center">
-                  <a href="login.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="Functions/logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

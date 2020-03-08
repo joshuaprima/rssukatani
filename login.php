@@ -17,6 +17,15 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="Component/plugins/iCheck/square/blue.css">
 
+  <?php
+error_reporting(0);
+session_start();
+if($_SESSION['status']=="login") {
+	header("location:index.php");
+	exit();
+} 
+?>
+
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -30,9 +39,9 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in </p>
 
-    <form action="cek_login.php" method="post">
+    <form action="Functions/cek_login.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" name="email" class="form-control" placeholder="Username">
+        <input type="text" name="username" class="form-control" placeholder="Username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

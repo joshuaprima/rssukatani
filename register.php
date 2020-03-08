@@ -1,6 +1,6 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
-
+<?php include 'Functions/sessionadmin.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
