@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
 
     <section class="content">
-      
+     <form action="Functions/register_function.php" method="post"> 
 
       <div class="row">
         <div class="col-xs-12">
@@ -20,11 +20,11 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="EmpName">Employee Name</label>
-                  <input type="text" class="form-control" id="EmpName" placeholder="Enter Full Name">
+                  <input type="text" class="form-control" name="EmpName" placeholder="Enter Full Name">
                 </div>
                 <div class="form-group">
                   <label for="EmpName">Unit/Department</label>
-                  <select class="form-control">
+                  <select class="form-control" name = "DeptUnit">
                     <option value="Gudang Umum">Gudang Umum</option>
                     <option value="Poli Gigi">Poli Gigi</option>
                     <option value="Lab">Lab</option>
@@ -43,17 +43,17 @@
                 </div>
                 <div class="form-group">
                   <label for="UserName">Username</label>
-                  <input type="text" class="form-control" id="UserName" placeholder="Enter Username">
+                  <input type="text" class="form-control" name="UserName" placeholder="Enter Username">
                 </div>
                 <div class="form-group">
                   <label for="UserPassword">Password</label>
-                  <input type="password" class="form-control" id="UserPassword" placeholder="Password">
+                  <input type="password" class="form-control" name="UserPassword" placeholder="Password">
                 </div>        
             </div>
             <div class="box-footer">
                 <a class="btn btn-danger pull-right" href="index.php">Cancel</a>
                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
-                Launch Info Modal
+                Save Changes
               </button>
             </div>
         <div class="box-footer">
@@ -78,7 +78,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success pull-left">Save changes</button>
+                <input type="submit" name="submit" class="btn btn-success pull-left"></input>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -86,6 +86,7 @@
           <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
+  </form>
     </section>
     <!-- /.content -->
   </div>
