@@ -1,4 +1,4 @@
-<?php include 'connection.php' ;
+<?php require_once 'connection.php' ;
       $con = getdb();
       session_start();
       
