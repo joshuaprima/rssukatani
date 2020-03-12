@@ -13,6 +13,7 @@ $data = mysqli_fetch_array($login);
 $cek   = mysqli_num_rows($login);
 if($cek > 0) {
     $_SESSION['username'] =$username;
+    $_SESSION['empID'] = $data['idpegawai'];
     $_SESSION['status']   ="login";
     $_SESSION['unit'] = $data['unit'];
     $_SESSION['empname'] = $data['nama_pegawai'];

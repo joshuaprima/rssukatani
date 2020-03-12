@@ -1,0 +1,13 @@
+insert di mysqlnya langsung kyk dibawah:
+
+INSERT INTO pegawai (idpegawai,
+nama_pegawai,
+unit,
+username,
+password )
+VALUES('1',
+'Administrator',
+'Administrator',
+'superuser',
+SHA2('adminjuga',256)
+)
