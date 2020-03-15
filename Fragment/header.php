@@ -90,7 +90,7 @@
               </li>
               <li class="user-footer">
               <div class="pull-left">
-                  <a href="employeeEdit.php?id=<?echo $_SESSION['empID'];?>" class="btn btn-default btn-flat">Edit Profile</a>
+                  <a href="profileEdit.php?id=<?echo $_SESSION['empID'];?>" class="btn btn-default btn-flat">Edit Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="Functions/logout.php" class="btn btn-default btn-flat">Sign out</a>

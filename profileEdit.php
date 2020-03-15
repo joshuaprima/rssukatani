@@ -8,7 +8,7 @@
     <!-- Content Header (Page header) -->
 
     <section class="content">
-     <form action="Functions/EditEmployee.php?id=<?php echo $empID;?>" method="post"> 
+     <form action="Functions/profileEditFunc.php?id=<?php echo $empID;?>" method="post"> 
 
       <div class="row">
         <div class="col-xs-12">
@@ -62,9 +62,9 @@
               </button>
             </div>
         <div class="box-footer">
-        <i class="fa fa-commenting pull-left"></i>
-            <small class="pull-left"> <i class="pull-left">If the password is changed by Administrator (SUPERUSER). Please immediately change password after logging into user's account to prevent security risks </i></small>
-        <br>
+            <i class="fa fa-commenting pull-left"></i>
+            <small class="pull-left"> <i class="pull-left">Please sign in after editing your profile to see the changes</i></small>
+          <br>
         </div>
         </div>
       </div>
@@ -79,7 +79,9 @@
                 <h4 class="modal-title">Edit Employee Profile</h4>
               </div>
               <div class="modal-body">
-                <p>The user data will be changed in the database. Please check if all the user's data is correct.</p>
+              <label for="CurrPass">User Verification</label>
+              <input type="password" class="form-control" name="CurrPass" placeholder="Enter Current Password to Confirm Changes" value="">
+                <p>The user data will be changed in the database. Please check if all the user's data is correct, and fill the current password</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
