@@ -20,10 +20,32 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <li>
-          <a href="Diklat/Siswa.php">
-            <i class="fa fa-laptop"></i> <span>Data Siswa</span>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-database"></i>
+            <span>Inventory</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="newInventory.php"><i class="fa fa-dropbox"></i> New Inventory</a></li>
+            <li><a href=""><i class="fa fa-cubes"></i> Inventory List</a></li>
+            <li><a href=""><i class="fa fa-folder"></i> Manage Request</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-exchange"></i>
+            <span>Transaction</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-cart-plus"></i>Request Items</a></li>
+            <li><a href=""><i class="fa fa-suitcase"></i> Request List</a></li>
+          </ul>
         </li>
         <?php
             if ($_SESSION['unit'] == "Administrator") {
