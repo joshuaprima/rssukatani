@@ -30,7 +30,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="newInventory.php"><i class="fa fa-dropbox"></i> New Inventory</a></li>
-            <li><a href=""><i class="fa fa-cubes"></i> Inventory List</a></li>
+            <li><a href="inventoryList.php"><i class="fa fa-cubes"></i> Inventory List</a></li>
             <li><a href=""><i class="fa fa-folder"></i> Manage Request</a></li>
           </ul>
         </li>

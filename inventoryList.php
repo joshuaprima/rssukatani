@@ -1,6 +1,6 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
-<?php include 'Functions/sessionadmin.php'; ?>
+<?php include 'Functions/sessionGudangUmum.php'; ?>
 
 <body>
   <!-- Content Wrapper. Contains page content -->
@@ -12,14 +12,14 @@
         <div class="col-xs-12">
             <div class="box box-default">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Employee List</h3>
+                    <h3 class="box-title">Inventory List Data</h3>
                     <div class="box-tools pull-right">
                         <a type="button" class="btn btn-box-tool" href="index.php"><i class="fa fa-remove"></i></a>
                      </div>
                 </div>
           <div class="box-body">
           <div style="overflow-x:auto;">
-            <?php include 'Functions/Tables/EmpTable.php'?>
+            <?php include 'Functions/Tables/InvTable.php'?>
 			  </div>
       </div>
     </section>
