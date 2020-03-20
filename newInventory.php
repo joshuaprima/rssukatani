@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
 
     <section class="content">
-     <form action="" method="post"> 
+     <form action="Functions/addNewInventory.php" method="post"> 
 
       <div class="row">
         <div class="col-xs-12">
@@ -91,7 +91,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="InvCustExpire" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask>
+                        <input type="text" class="form-control pull-right" id="InvCustExpire" name="InvCustom" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask>
                     </div>
                 </div>
 
