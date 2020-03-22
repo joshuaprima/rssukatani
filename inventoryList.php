@@ -21,6 +21,11 @@
           <div style="overflow-x:auto;">
             <?php include 'Functions/Tables/InvTable.php'?>
 			  </div>
+        <div class="box-footer">
+            <i class="fa fa-commenting pull-left"></i>
+            <small class="pull-left"> <i class="pull-left">Note: The marked data with yellow highlight is already expired.</i></small>
+          <br>
+        </div>
       </div>
     </section>
     <!-- /.content -->

@@ -159,18 +159,18 @@ textarea.addEventListener('input', function() {
 <script>
 $(function () {
     //Date for InvBlud
-    $('#InvBlud').inputmask('dd-mm-yyyy', { 'placeholder': 'dd-mm-yyyy' })
+    $('#InvBlud').inputmask('yyyy-mm-dd', { 'placeholder': 'yyyy-mm-dd' })
     
     $('#InvBlud').datepicker({
       autoclose: true,
-      format: 'dd-mm-yyyy'
+      format: 'yyyy-mm-dd'
     })
     //Date for InvCustExpire
-    $('#InvCustExpire').inputmask('dd-mm-yyyy', { 'placeholder': 'dd-mm-yyyy' })
+    $('#InvCustExpire').inputmask('yyyy-mm-dd', { 'placeholder': 'yyyy-mm-dd' })
     
     $('#InvCustExpire').datepicker({
       autoclose: true,
-      format: 'dd-mm-yyyy'
+      format: 'yyyy-mm-dd'
     })
 })
 </script>

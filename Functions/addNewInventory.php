@@ -14,10 +14,11 @@ if(isset($_POST['submit'])) {
     $price = $_POST['InvPrice'];
     $blud = $_POST['InvBlud'];
     $customExp = $_POST['InvCustom'];
+    $expiredDate = date('Y-m-d ', strtotime('+1825 days'));
 
     $query = 
-    "INSERT INTO barang (idbarang, nama, distributor, quantity,satuan,deskripsi,harga_satuan,tanggal_blud,cust_expired_date, types )
-    VALUES('$uuid','$item','$distributor','$quantity','$satuan','$desc','$price','$blud','$customExp','$types')";
+    "INSERT INTO barang (idbarang, nama, distributor, quantity,satuan,deskripsi,harga_satuan,tanggal_blud,cust_expired_date, expired_date, types)
+    VALUES('$uuid','$item','$distributor','$quantity','$satuan','$desc','$price','$blud','$customExp','$expiredDate','$types')";
     
     $sql = mysqli_query($con,$query);
     
