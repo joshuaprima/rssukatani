@@ -1,51 +1,45 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
 <?php include 'Functions/sessionGudangUmum.php'; ?>
+<?php include 'Functions/getInventoryData.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
     <section class="content">
-     <form action="" method="post"> 
+     <form action="Functions/EditInventory.php?id=<?php echo $invID;?>" method="post">
 
       <div class="row">
         <div class="col-xs-12">
           <div class="box box-default">
           <div class="box-header with-border">
           <h3 class="box-title">Inventory Details | </h3>
-          <button class="btn btn-warning btn-xs">Edit</button>
+          <button class="btn btn-warning btn-xs" id="btn_edit">Edit</button>
           <div class="box-tools pull-right">
             <a type="button" class="btn btn-box-tool" href="index.php"><i class="fa fa-remove"></i></a>
           </div>
             <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Item Name</label>
-                  <input type="text" class="form-control" name="InvName" placeholder="Enter Item Name" disabled>
+                  <input id="nama" class="form-control" name="InvName" placeholder="Enter Item Name" value="<?php echo $data['nama'];?>" disabled="disabled">
                 </div>
                 <div class="form-group">
                   <label for="InvDist">Distributor Name</label>
-                  <input type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" disabled>
+                  <input id="distributor" type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" value="<?php echo $data['distributor'];?>" disabled="disabled" >
                 </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <div class="form-group">
-                  <label for="CurrTypes">Current Item Types</label>
-                  <input type="text" class="form-control" name="CurrTypes" placeholder="Enter Item Types" disabled>
-                </div>
-              </div>
               <div class="col-xs-6">
                 <div class="form-group">
                   <label for="InvTypes">Item Types</label>
-                  <select class="form-control" name = "InvTypes" disabled>
-                    <option value="ATK">ATK</option>
-                    <option value="Kebersihan">Kebersihan</option>
-                    <option value="Cetakan">Cetakan</option>
-                    <option value="Obat Gigi">Obat Gigi</option>
-                    <option value="Reagen Lab">Reagen Lab</option>
-                    <option value="BMHP">BMHP</option>
-                    <option value="Makanan Tambahan">Makanan Tambahan</option>
-                    <option value="Formulir">Formulir</option>
+                  <select id="typemenu" class="form-control" name = "InvTypes" disabled="disabled">
+                    <option <?php if($data['types'] =='ATK'){echo "selected"; } ?> value="ATK">ATK</option>
+                    <option <?php if($data['types'] =='Kebersihan'){echo "selected"; } ?> value="Kebersihan">Kebersihan</option>
+                    <option <?php if($data['types'] =='Cetakan'){echo "selected"; } ?> value="Cetakan">Cetakan</option>
+                    <option <?php if($data['types'] =='Obat Gigi'){echo "selected"; } ?> value="Obat Gigi">Obat Gigi</option>
+                    <option <?php if($data['types'] =='Reagen Lab'){echo "selected"; } ?> value="Reagen Lab">Reagen Lab</option>
+                    <option <?php if($data['types'] =='BMHP'){echo "selected"; } ?> value="BMHP">BMHP</option>
+                    <option <?php if($data['types'] =='Makanan Tambahan'){echo "selected"; } ?> value="Makanan Tambahan">Makanan Tambahan</option>
+                    <option <?php if($data['types'] =='Formulir'){echo "selected"; } ?> value="Formulir">Formulir</option>
                   </select>
                 </div>
               </div>
@@ -54,42 +48,36 @@
             <div class="col-xs-6">
                 <div class="form-group">
                 <label for="InvQty">Quantity</label>
-                  <input type="Number" class="form-control" name="InvQty" placeholder="Enter Quantity" disabled>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="form-group">
-                <label for="InvQty">Current Measurement / Satuan</label>
-                  <input type="Text" class="form-control" name="CurrMeasurement" placeholder="Enter Measurement" disabled>
+                  <input id="quantity" type="Number" class="form-control" name="InvQty" placeholder="Enter Quantity" value="<?php echo $data['quantity'];?>" disabled="disabled">
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="form-group">
                 <label for="Invmeasurement">Measurement / Satuan</label>
-                <select class="form-control" name = "InvMeasurement" disabled>
-                    <option value="Pcs">Pcs</option>
-                    <option value="Box">Box</option>
-                    <option value="Lab">Pack</option>
-                    <option value="Set">Set</option>
-                    <option value="Derigen">Derigen</option>
-                    <option value="Rim">Rim</option>
-                    <option value="Roll">Roll</option>
-                    <option value="Buku">Buku</option>
+                <select id="satuanmenu" class="form-control" name = "InvMeasurement" disabled="disabled">
+                    <option <?php if($data['satuan'] =='Pcs'){echo "selected"; } ?> value="Pcs">Pcs</option>
+                    <option <?php if($data['satuan'] =='Box'){echo "selected"; } ?> value="Box">Box</option>
+                    <option <?php if($data['satuan'] =='Lab'){echo "selected"; } ?> value="Lab">Pack</option>
+                    <option <?php if($data['satuan'] =='Set'){echo "selected"; } ?> value="Set">Set</option>
+                    <option <?php if($data['satuan'] =='Derigen'){echo "selected"; } ?>value="Derigen">Derigen</option>
+                    <option <?php if($data['satuan'] =='Rim'){echo "selected"; } ?> value="Rim">Rim</option>
+                    <option <?php if($data['satuan'] =='Roll'){echo "selected"; } ?> value="Roll">Roll</option>
+                    <option <?php if($data['satuan'] =='Buku'){echo "selected"; } ?> value="Buku">Buku</option>
                   </select>
                 </div>
             </div>
         </div>
                 <div class="form-group">
                   <label>Item Description</label>
-                  <textarea class="form-control" name="InvDesc" id="InvDesc" placeholder="Enter Item Description"
-                  maxlength="2000" style="resize: vertical; min-height:75px;" disabled></textarea>
+                  <textarea id="deskripsi" class="form-control" name="InvDesc" id="InvDesc" placeholder="Enter Item Description"
+                  maxlength="2000" style="resize: vertical; min-height:75px;" disabled="disabled"> <?php echo $data['deskripsi'];?> </textarea>
                   <label id="lettersCount" class="pull-right" style="color: #d2d6de;"><label>
                 </div>
                 <div class="form-group">
                   <label>Item Price</label>
                     <div class="input-group">
                         <span class="input-group-addon">IDR</span>
-                            <input type="Number" name="InvPrice" class="form-control" disabled>
+                            <input id="harga" type="Number" name="InvPrice" class="form-control" value="<?php echo $data['harga_satuan'];?>" disabled="disabled">
                         <span class="input-group-addon">,00</span>
                     </div>
                 </div> 
@@ -99,7 +87,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask disabled>
+                        <input id="blud" type="text" class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" value="<?php echo $data['tanggal_blud'];?>" data-mask disabled="disabled">
                     </div>
                 </div>
                 <div class="form-group">
@@ -108,14 +96,14 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="InvCustExpire" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask disabled>
+                        <input id="custom" type="text" class="form-control pull-right" id="InvCustExpire" name="InvCustExpire" data-inputmask="'alias': 'dd-mm-yyyy'" value="<?php echo $data['cust_expired_date'];?>" data-mask disabled="disabled">
                     </div>
                 </div>
 
         </div>
             <div class="box-footer">
                 <a class="btn btn-danger pull-right" href="index.php">Cancel</a>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info" disabled>
+                <button id="save" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info" disabled="disabled">
                 Save Changes
               </button>
             </div>
@@ -190,6 +178,27 @@ $(function () {
       format: 'dd-mm-yyyy'
     })
 })
+</script>
+
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $("#btn_edit").click(function(){
+            event.preventDefault();
+            $("#nama").removeAttr("disabled");
+            $("#distributor").removeAttr("disabled");
+            $("#type").removeAttr("disabled");
+            $("#typemenu").removeAttr("disabled");
+            $("#quantity").removeAttr("disabled");
+            $("#satuanmenu").removeAttr("disabled");
+            $("#deskripsi").removeAttr("disabled");
+            $("#harga").removeAttr("disabled");
+            $("#blud").removeAttr("disabled");
+            $("#custom").removeAttr("disabled");
+            $("#save").removeAttr("disabled");
+        });
+    });
 </script>
   <!--End of Custom Scripts-->
   
