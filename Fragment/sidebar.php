@@ -31,7 +31,7 @@
           <ul class="treeview-menu">
             <li><a href="newInventory.php"><i class="fa fa-dropbox"></i> New Inventory</a></li>
             <li><a href="inventoryList.php"><i class="fa fa-cubes"></i> Inventory List</a></li>
-            <li><a href=""><i class="fa fa-folder"></i> Manage Request</a></li>
+            <li><a href="requestManage.php"><i class="fa fa-folder"></i> Manage Request</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -43,8 +43,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-cart-plus"></i>Request Items</a></li>
-            <li><a href=""><i class="fa fa-suitcase"></i> Request List</a></li>
+            <li><a href="inventoryReqList.php"><i class="fa fa-cart-plus"></i>Request Items</a></li>
+            <li><a href="requestList.php"><i class="fa fa-suitcase"></i> Request List</a></li>
           </ul>
         </li>
         <?php

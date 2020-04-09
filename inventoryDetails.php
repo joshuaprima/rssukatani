@@ -19,17 +19,16 @@
           <div class="box-tools pull-right">
             <a type="button" class="btn btn-box-tool" href="index.php"><i class="fa fa-remove"></i></a>
           </div>
-            <div class="box-body">
+          <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Item Name</label>
                   <input id="nama" class="form-control" name="InvName" placeholder="Enter Item Name" value="<?php echo $data['nama'];?>" disabled="disabled">
-                </div>
-                <div class="form-group">
+            </div>
+            <div class="form-group">
                   <label for="InvDist">Distributor Name</label>
                   <input id="distributor" type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" value="<?php echo $data['distributor'];?>" disabled="disabled" >
-                </div>
-              <div class="col-xs-6">
-                <div class="form-group">
+            </div>
+            <div class="form-group">
                   <label for="InvTypes">Item Types</label>
                   <select id="typemenu" class="form-control" name = "InvTypes" disabled="disabled">
                     <option <?php if($data['types'] =='ATK'){echo "selected"; } ?> value="ATK">ATK</option>
@@ -41,8 +40,6 @@
                     <option <?php if($data['types'] =='Makanan Tambahan'){echo "selected"; } ?> value="Makanan Tambahan">Makanan Tambahan</option>
                     <option <?php if($data['types'] =='Formulir'){echo "selected"; } ?> value="Formulir">Formulir</option>
                   </select>
-                </div>
-              </div>
             </div>
         <div class="row">
             <div class="col-xs-6">
@@ -99,7 +96,7 @@
                         <input id="custom" type="text" class="form-control pull-right" id="InvCustExpire" name="InvCustExpire" data-inputmask="'alias': 'dd-mm-yyyy'" value="<?php echo $data['cust_expired_date'];?>" data-mask disabled="disabled">
                     </div>
                 </div>
-
+            </div>
         </div>
             <div class="box-footer">
                 <a class="btn btn-danger pull-right" href="index.php">Cancel</a>
