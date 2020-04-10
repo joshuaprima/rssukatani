@@ -1,6 +1,7 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
 <?php include 'Functions/sessionGudangUmum.php'; ?>
+<?php include 'Functions/getRequestData.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -20,16 +21,20 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Inventory Name</label>
-                  <input type="text" disabled class="form-control" name="InvName" placeholder="Inventory Name">
+                  <input type="text" disabled class="form-control" name="InvName" placeholder="Inventory Name"value="<?php echo $data['nama'];?>">
+                </div>
+                <div class="form-group">
+                  <label for="Stock">Stock</label>
+                  <input type="text" disabled class="form-control" name="Stock" placeholder="Stock" value="<?php echo $data['quantity'];?>">
                 </div>
                 <div class="form-group">
                   <label for="Quantity">Quantity</label>
-                  <input type="Number" class="form-control" name="UserName" placeholder="Enter Amount" disabled>
+                  <input type="Number" class="form-control" name="UserName" placeholder="Enter Amount" disabled value="<?php echo $data['jumlah'];?>">
                 </div>
                 <div class="form-group">
                   <label>Description</label>
                   <textarea class="form-control" name="ReqDesc" id="InvDesc" placeholder="Enter Item Description"
-                  maxlength="255" style="resize: vertical; min-height:75px;" disabled></textarea>
+                  maxlength="255" style="resize: vertical; min-height:75px;" disabled><?php echo $data['deskripsi'];?></textarea>
                   <label id="lettersCount" class="pull-right" style="color: #d2d6de;"><label>
                 </div>      
             </div>

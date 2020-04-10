@@ -22,8 +22,8 @@
                   echo"<td>".$data['idbarang']."</td>";
                   echo"<td>".$data['jumlah']."</td>";
                   echo"<td>".$data['tgl_permintaan']."</td>";
-                  echo "<td><a class='btn btn-block btn-success' href='requestProcess.php'>Process</a>
-                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion');\" href='Functions/DeleteEmployee.php?id=".$data['idpermintaan']."'>Delete</a></td>";
+                  echo "<td><a class='btn btn-block btn-success' href='requestProcess.php?id=".$data['idpermintaan']."'>Process</a>
+                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion');\" href='Functions/DeleteRequest.php?id=".$data['idpermintaan']."'>Delete</a></td>";
                   echo"</tr>";
             }
             ?> 
