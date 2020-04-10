@@ -1,12 +1,13 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
+<?php include 'Functions/getBarangData.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
     <section class="content">
-     <form action="" method="post"> 
+     <form action="Functions/addRequest.php?id=<?php echo $ID_barang;?>" method="post"> 
 
       <div class="row">
         <div class="col-xs-12">
@@ -19,11 +20,15 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Inventory Name</label>
-                  <input type="text" disabled class="form-control" name="InvName" placeholder="Inventory Name">
+                  <input type="text" disabled class="form-control" name="InvName" placeholder="Inventory Name" value="<?php echo $data['nama'];?>">
+                </div>
+                <div class="form-group">
+                  <label for="Stock">Stock</label>
+                  <input type="text" disabled class="form-control" name="Stock" placeholder="Stock" value="<?php echo $data['quantity'];?>">
                 </div>
                 <div class="form-group">
                   <label for="Quantity">Quantity</label>
-                  <input type="Number" class="form-control" name="UserName" placeholder="Enter Amount">
+                  <input type="Number" class="form-control" name="Qty" placeholder="Enter Amount">
                 </div>
                 <div class="form-group">
                   <label>Description</label>

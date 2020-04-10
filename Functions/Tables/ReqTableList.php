@@ -24,7 +24,7 @@
                   echo"<td>".$data['jumlah']."</td>";
                   echo"<td>".$data['tgl_permintaan']."</td>";
                   echo "<td><a class='btn btn-block btn-warning' href='requestEdit.php'>Edit</a>
-                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion');\" href='Functions/DeleteEmployee.php?id=".$data['idpermintaan']."'>Delete</a></td>";
+                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion');\" href='Functions/DeleteRequest.php?id=".$data['idpermintaan']."'>Delete</a></td>";
                   echo"</tr>";
             }
             ?> 
