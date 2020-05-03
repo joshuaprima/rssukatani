@@ -1,6 +1,7 @@
 <?php include 'Fragment/header.php';?>
 <?php include 'Fragment/sidebar.php'; ?>
-
+<?php include 'Functions/sessionadmin.php'; ?>
+<?php include 'Functions/getPrintData.php'; ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -25,7 +26,7 @@
         <div class="col-xs-12">
           <h2 class="page-header">
             <i class="fa fa-globe"></i> Rs. Sukatani
-            <small class="pull-right">Date: 2/10/2019</small>
+            <small class="pull-right"><?php echo $data['tgl_permintaan'];?></small>
           </h2>
         </div>
         <!-- /.col -->
@@ -35,8 +36,8 @@
         <div class="col-sm-4 invoice-col">
           From
           <address>
-            <strong>Agus Rembo</strong><br>
-            Poli Gigi<br>
+            <strong><?php echo $data['nama_pegawai'];?></strong><br>
+              <?php echo $data['unit'];?><br>
           </address>
         </div>
         <!-- /.col -->
@@ -44,7 +45,7 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col">
-          <b>Invoice #0001</b><br>
+          <b> Kode Permintaan : <?php echo $data['idpermintaan'];?></b><br>
         </div>
         <!-- /.col -->
       </div>
@@ -56,18 +57,18 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th>Qty</th>
-              <th>Inventory</th>
-              <th>Serial #</th>
-              <th>Description</th>
+              <th>Jumlah</th>
+              <th>Nama Barang</th>
+              <th>Tipe Barang</th>
+              <th>Deskripsi Barang</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td>1</td>
-              <td>Syringe</td>
-              <td>Ef01275-917fgd...</td>
-              <td>Syringe set</td>
+              <td><?php echo $data['jumlah'];?></td>
+              <td><?php echo $data['nama'];?></td>
+              <td><?php echo $data['types'];?></td>
+              <td><?php echo $data['deskripsi_barang'];?></td>
             </tr>
             </tbody>
           </table>
@@ -80,8 +81,8 @@
         <!-- accepted payments column -->
         <div class="col-xs-12">
           <p class="well well-sm no-shadow" style="margin-top: 10px;">
-          <b>Deskripsi Peminjaman: </b><br>
-            Lorem ipsum
+          <b>Deskripsi Permintaan: </b><br>
+              <?php echo $data['deskripsi_permintaan'];?>
           </p>
         </div>
         <!-- /.col -->
@@ -91,7 +92,7 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="printbukti.php" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
+          <a href="printbukti.php?id=<?php echo $data['idpermintaan'];?>" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i>Print</a>
         </div>
       </div>
     </section>

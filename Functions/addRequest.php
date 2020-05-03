@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
         echo "<script type=\"text/javascript\">
         alert(\"Permintaan Barang Berhasil Dikirim!\");
         
-        window.location = \"../previewbukti.php\"
+        window.location = \"../requestList.php\"
       </script>" ;
     } else {
         echo "<script type=\"text/javascript\">

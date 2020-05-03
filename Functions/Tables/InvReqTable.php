@@ -27,7 +27,7 @@
                     echo"<td>".$data['nama']."</td>";
                     echo"<td>".$data['quantity']."</td>";
                     echo"<td>".$data['satuan']."</td>";
-                    echo "<td><a class='btn btn-block btn-info' href='request.php?id=".$data['idbarang']."'>Details</a>";
+                    echo "<td><a class='btn btn-block btn-info' href='request.php?id=".$data['idbarang']."'>Request</a>";
                     echo"</tr>";
                   
             }

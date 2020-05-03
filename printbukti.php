@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'Functions/sessions.php';?>
+  <?php include 'Functions/sessions.php';?>
+  <?php include 'Functions/getPrintData.php'; ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Print Requests</title>
+  <title>Surat Permintaan Barang</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="width=device-width, initial-scale=1, maximum-sca le=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="Component/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -36,7 +37,7 @@
         <div class="col-xs-12">
           <h2 class="page-header">
             <i class="fa fa-globe"></i> Rs. Sukatani
-            <small class="pull-right">Date: 2/10/2019</small>
+            <small class="pull-right"><?php echo $data['tgl_permintaan'];?></small>
           </h2>
         </div>
         <!-- /.col -->
@@ -46,8 +47,8 @@
         <div class="col-sm-4 invoice-col">
           From
           <address>
-            <strong>Agus Rembo</strong><br>
-            Poli Gigi<br>
+            <strong><?php echo $data['nama_pegawai'];?></strong><br>
+            <?php echo $data['unit'];?><br>
           </address>
         </div>
         <!-- /.col -->
@@ -55,7 +56,7 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col">
-          <b>Invoice #0001</b><br>
+          <b>Kode Permintaan : <?php echo $data['idpermintaan'];?></b><br>
         </div>
         <!-- /.col -->
       </div>
@@ -67,18 +68,18 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th>Qty</th>
-              <th>Inventory</th>
-              <th>Serial #</th>
-              <th>Description</th>
+                <th>Jumlah</th>
+                <th>Nama Barang</th>
+                <th>Tipe Barang</th>
+                <th>Deskripsi Barang</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td>1</td>
-              <td>Syringe</td>
-              <td>Ef01275-917fgd...</td>
-              <td>Syringe set</td>
+                <td><?php echo $data['jumlah'];?></td>
+                <td><?php echo $data['nama'];?></td>
+                <td><?php echo $data['types'];?></td>
+                <td><?php echo $data['deskripsi_barang'];?></td>
             </tr>
             </tbody>
           </table>
@@ -91,8 +92,8 @@
         <!-- accepted payments column -->
         <div class="col-xs-12">
           <p class="well well-sm no-shadow" style="margin-top: 10px;">
-          <b>Deskripsi Peminjaman: </b><br>
-            Lorem ipsum
+              <b>Deskripsi Permintaan: </b><br>
+              <?php echo $data['deskripsi_permintaan'];?>
           </p>
         </div>
         <!-- /.col -->

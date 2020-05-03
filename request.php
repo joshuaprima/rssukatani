@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Quantity">Quantity</label>
-                  <input type="Number" class="form-control" name="Qty" placeholder="Enter Amount">
+                  <input type="Number" class="form-control" name="Qty" placeholder="Enter Amount" required>
                 </div>
                 <div class="form-group">
                   <label>Description</label>
