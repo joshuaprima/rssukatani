@@ -3,6 +3,7 @@
 <head>
   <?php include 'Functions/sessions.php';?>
   <?php include 'Functions/getPrintData.php'; ?>
+  <?php include 'Functions/sessionGudangUmum.php'; ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Surat Permintaan Barang</title>

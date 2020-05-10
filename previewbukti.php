@@ -7,8 +7,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Invoice
-        <small>#0001</small>
+          Kode Permintaan :
+        <small><?php echo $data['idpermintaan'];?></small>
       </h1>
     </section>
 

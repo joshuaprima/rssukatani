@@ -3,6 +3,7 @@
 <head>
 <?php include 'Functions/sessions.php';?>
 <?php include 'Functions/sessionGudangUmum.php'; ?>
+<?php include 'Functions/getPrintOutData.php'; ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | Print Transaction</title>
@@ -37,7 +38,7 @@
         <div class="col-xs-12">
           <h2 class="page-header">
             <i class="fa fa-globe"></i> Rs. Sukatani
-            <small class="pull-right">Date: 2/10/2019</small>
+            <small class="pull-right"><?php echo $dateNow;?></small>
           </h2>
         </div>
         <!-- /.col -->
@@ -47,14 +48,14 @@
         <div class="col-sm-4 invoice-col">
           Receiver
           <address>
-            <strong>Agus Rembo</strong><br>
-            Poli Gigi<br>
+            <strong><?php echo $data['nama_pegawai'];?></strong><br>
+              <?php echo $data['unit'];?><br>
           </address>
         </div>
         <div class="col-sm-4 invoice-col">
-          Warehouse Administrator
+          Admin Gudang
           <address>
-            <strong>Anandya Marishka</strong><br>
+            <strong><?php echo $data2['nama_pegawai'];?></strong><br>
           </address>
         </div>
         <!-- /.col -->
@@ -62,7 +63,7 @@
         </div>
         <!-- /.col -->
         <div class="col-sm-4 invoice-col">
-          <b>Invoice #0001</b><br>
+          <b>Kode Permintaan : <?php echo $data['idpermintaan'];?></b><br>
         </div>
         <!-- /.col -->
       </div>
@@ -74,18 +75,20 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th>Qty</th>
-              <th>Inventory</th>
-              <th>Serial #</th>
-              <th>Description</th>
+              <th>Jumlah Permintaan</th>
+              <th>Jumlah Keluar</th>
+              <th>Nama Barang</th>
+              <th>Tipe Barang</th>
+              <th>Deskripsi Barang</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td>1</td>
-              <td>Syringe</td>
-              <td>Ef01275-917fgd...</td>
-              <td>Syringe set</td>
+              <td><?php echo $data['jumlah'];?></td>
+              <td><?php echo $reqOut;?></td>
+              <td><?php echo $data['nama'];?></td>
+              <td><?php echo $data['types'];?></td>
+              <td><?php echo $data['deskripsi_barang'];?></td>
             </tr>
             </tbody>
           </table>
@@ -99,19 +102,12 @@
         <div class="col-xs-12">
           <p class="well well-sm no-shadow" style="margin-top: 10px;">
           <b>Deskripsi Peminjaman: </b><br>
-            Lorem ipsum
+          <?php echo $data['deskripsi_permintaan'];?>
           </p>
         </div>
         <!-- /.col -->
       </div>
       <!-- /.row -->
-
-      <!-- this row will not appear when printing -->
-      <div class="row no-print">
-        <div class="col-xs-12">
-          <a href="printout.php" target="_blank" class="btn btn-primary pull-right"><i class="fa fa-print"></i> Print</a>
-        </div>
-      </div>
     </section>
   <!-- /.content -->
 </div>

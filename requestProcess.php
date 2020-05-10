@@ -8,7 +8,7 @@
     <!-- Content Header (Page header) -->
 
     <section class="content">
-     <form action="" method="post"> 
+     <form action="previewout.php?id=<?php echo $ID_permintaan;?>" method="post">
 
       <div class="row">
         <div class="col-xs-12">
@@ -20,16 +20,20 @@
           </div>
             <div class="box-body">
             <div class="form-group">
-                  <label for="InvName">Inventory Name</label>
+                  <label for="InvName">Nama Barang</label>
                   <input type="text" disabled class="form-control" name="InvName" placeholder="Inventory Name"value="<?php echo $data['nama'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="Stock">Stock</label>
+                  <label for="Stock">Stok</label>
                   <input type="text" disabled class="form-control" name="Stock" placeholder="Stock" value="<?php echo $data['quantity'];?>">
                 </div>
                 <div class="form-group">
-                  <label for="Quantity">Quantity</label>
+                  <label for="Quantity">Jumlah Permintaan</label>
                   <input type="Number" class="form-control" name="UserName" placeholder="Enter Amount" disabled value="<?php echo $data['jumlah'];?>">
+                </div>
+                <div class="form-group">
+                    <label for="Quantity">Jumlah Barang Keluar</label>
+                    <input type="Number" class="form-control" name="reqOut" id="reqOut" placeholder="Enter Amount" min="1" max="<?php echo $data['quantity'];?>">
                 </div>
                 <div class="form-group">
                   <label>Description</label>
