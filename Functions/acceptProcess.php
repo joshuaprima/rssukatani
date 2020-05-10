@@ -23,12 +23,12 @@
 
             $stokbaru = $data['quantity']-$reqOut;
             $idbar = $data['id_barang'];
-            $query4 = "UPDATE barang SET quantity='$stokbaru' WHERE idbarang='$idbar'";
-            $sql4 = mysqli_query($con,$query4);
+            $query3 = "UPDATE barang SET quantity='$stokbaru' WHERE idbarang='$idbar'";
+            $sql3 = mysqli_query($con,$query3);
 
-            $query3 = "SELECT * FROM pegawai WHERE idpegawai='$idSession'";
-            $sql3 = mysqli_query($con, $query3);
-            $data2 = mysqli_fetch_array($sql3);
+            $query4 = "SELECT * FROM pegawai WHERE idpegawai='$idSession'";
+            $sql4 = mysqli_query($con, $query4);
+            $data2 = mysqli_fetch_array($sql4);
         }
     }
     else{
