@@ -29,6 +29,9 @@
             $query4 = "SELECT * FROM pegawai WHERE idpegawai='$idSession'";
             $sql4 = mysqli_query($con, $query4);
             $data2 = mysqli_fetch_array($sql4);
+
+            $query5 = "INSERT INTO transaksi (idpegawai, idpermintaan, tgl_transaksi, jumlah_out) VALUES ('$idSession','$reqId','$dateNow','$reqOut')";
+            $sql5 = mysqli_query($con, $query5);
         }
     }
     else{

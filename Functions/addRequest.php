@@ -13,8 +13,8 @@ if(isset($_POST['submit'])) {
 
     $get_query = 
     $query = 
-    "INSERT INTO permintaan (idbarang, idpegawai, jumlah, deskripsi, tgl_permintaan)
-    VALUES('$item','$pegawai','$quantity','$desc','$datenow')";
+    "INSERT INTO permintaan (idbarang, idpegawai, jumlah, deskripsi, tgl_permintaan, status)
+    VALUES('$item','$pegawai','$quantity','$desc','$datenow','Waiting')";
     
     $sql = mysqli_query($con,$query);
     
