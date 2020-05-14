@@ -32,6 +32,7 @@
             <li><a href="newInventory.php"><i class="fa fa-dropbox"></i> New Inventory</a></li>
             <li><a href="inventoryList.php"><i class="fa fa-cubes"></i> Inventory List</a></li>
             <li><a href="requestManage.php"><i class="fa fa-folder"></i> Manage Request</a></li>
+            <li><a href="transactionList.php"><i class="fa fa-folder"></i> Transaction List</a></li>
           </ul>
         </li>
         <li class="treeview">

@@ -32,7 +32,7 @@
                     <option value="ATK">ATK</option>
                     <option value="Kebersihan">Kebersihan</option>
                     <option value="Cetakan">Cetakan</option>
-                    <option value="Obat Gigi">Obat Gigi</option>
+                    <option value="Bahan Gigi">Bahan Gigi</option>
                     <option value="Reagen Lab">Reagen Lab</option>
                     <option value="BMHP">BMHP</option>
                     <option value="Makanan Tambahan">Makanan Tambahan</option>

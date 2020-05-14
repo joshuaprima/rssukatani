@@ -25,26 +25,7 @@
                 </div>
                 <div class="form-group">
                   <label for="EmpName">Current Department</label>
-                  <input type="text" class="form-control" placeholder="Enter Full Name" value="<?php echo $data['unit'];?>" disabled>
-                </div>
-                <div class="form-group">
-                  <label for="EmpName">Unit/Department</label>
-                  <select class="form-control" name = "DeptUnit">
-                    <option value="Gudang Umum">Gudang Umum</option>
-                    <option value="Poli Gigi">Poli Gigi</option>
-                    <option value="Lab">Lab</option>
-                    <option value="Tindakan">Tindakan</option>
-                    <option value="Poli Umum">Poli Umum</option>
-                    <option value="Pemeriksaan">Pemeriksaan</option>
-                    <option value="KIA">KIA (Bidan)</option>
-                    <option value="Farmasi">Farmasi</option>
-                    <option value="Poli Gizi">Poli Gizi</option>
-                    <option value="Promosi Kesehatan">Promosi Kesehatan</option>
-                    <option value="Kesehatan Lingkungan">Kesehatan Lingkungan</option>
-                    <option value="Tata Usaha">Tata Usaha</option>
-                    <option value="Pendaftaran">Pendaftaran</option>
-                    <option value="Prakarya">Prakarya</option>
-                  </select>
+                  <input type="text" class="form-control" name="DeptUnit" placeholder="Enter Full Name" value="<?php echo $data['unit'];?>" disabled>
                 </div>
                 <div class="form-group">
                   <label for="UserName">Username</label>
@@ -63,7 +44,7 @@
             </div>
         <div class="box-footer">
             <i class="fa fa-commenting pull-left"></i>
-            <small class="pull-left"> <i class="pull-left">Please sign in after editing your profile to see the changes</i></small>
+            <small class="pull-left"> <i class="pull-left">Please sign in after editing your profile to see the changes. (Leave the new password blank if you do not want to change the password)</i> </small>
           <br>
         </div>
         </div>

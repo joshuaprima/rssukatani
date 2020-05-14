@@ -2,7 +2,7 @@
                 <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Pegawai</th>
+                  <th>Peminta</th>
                   <th>Nama Barang</th>
                   <th>Jumlah</th>
                   <th>Tanggal</th>
@@ -12,14 +12,19 @@
                 <tbody>
                 <?php 
                 $id = $_SESSION['empID'];
-                $query = "SELECT * FROM permintaan inner join barang on permintaan.idbarang = barang.idbarang where idpegawai='$id'" ;
+                if($_SESSION['unit'] == 'Administrator'){
+                  $query = "SELECT * FROM permintaan inner join barang on permintaan.idbarang = barang.idbarang inner join pegawai on permintaan.idpegawai = pegawai.idpegawai where status='Waiting'" ;
+                }else{
+                  $query = "SELECT * FROM permintaan inner join barang on permintaan.idbarang = barang.idbarang inner join pegawai on permintaan.idpegawai = pegawai.idpegawai where idpegawai='$id' and status='Waiting'" ;
+                }
+               
                 $sql   = mysqli_query($con,$query);
                 
                 while ($data = mysqli_fetch_array($sql)) {
                     
                   echo"<tr>";
                   echo"<td>".$data['idpermintaan']."</td>";
-                  echo"<td>".$data['idpegawai']."</td>";
+                  echo"<td>".$data['nama_pegawai']."</td>";
                   echo"<td>".$data['nama']."</td>";
                   echo"<td>".$data['jumlah']."</td>";
                   echo"<td>".$data['tgl_permintaan']."</td>";
@@ -32,7 +37,7 @@
                 <tfoot>
                 <tr>
                   <th>ID</th>
-                  <th>Pegawai</th>
+                  <th>Peminta</th>
                   <th>Nama Barang</th>
                   <th>Jumlah</th>
                   <th>Tanggal</th>

@@ -61,6 +61,7 @@
               <th>Nama Barang</th>
               <th>Tipe Barang</th>
               <th>Deskripsi Barang</th>
+              <th>BLUD</th>
             </tr>
             </thead>
             <tbody>
@@ -69,6 +70,7 @@
               <td><?php echo $data['nama'];?></td>
               <td><?php echo $data['types'];?></td>
               <td><?php echo $data['deskripsi_barang'];?></td>
+              <td><?php echo $data['tanggal_blud'];?></td>
             </tr>
             </tbody>
           </table>

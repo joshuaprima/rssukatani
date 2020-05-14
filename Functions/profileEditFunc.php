@@ -5,7 +5,6 @@ $con      = getDB();
 
 $empID = $_GET['id'];
 $employee = $_POST['EmpName'];
-$unit = $_POST['DeptUnit'];
 $username = $_POST['UserName'];
 $password = $_POST['UserPassword'];
 $currentpass = $_POST['CurrPass'];
@@ -17,7 +16,7 @@ $data = mysqli_fetch_array($query2);
 $cek   = mysqli_num_rows($query2);
 if($cek > 0) {
     if ($password == "")
-        { $query = "UPDATE pegawai SET nama_pegawai='$employee', unit='$unit', username='$username' WHERE idpegawai='$empID'";
+        { $query = "UPDATE pegawai SET nama_pegawai='$employee', username='$username' WHERE idpegawai='$empID'";
         $sql = mysqli_query($con,$query); 
 
     if ($sql) {
@@ -41,7 +40,7 @@ if($cek > 0) {
         </script>";	
         }
 } else {  
-    $query = "UPDATE pegawai SET nama_pegawai='$employee', unit='$unit', username='$username', password=SHA2('$password',256) WHERE idpegawai='$empID'";
+    $query = "UPDATE pegawai SET nama_pegawai='$employee', username='$username', password=SHA2('$password',256) WHERE idpegawai='$empID'";
     $sql = mysqli_query($con,$query); 
 
     if ($sql) {
