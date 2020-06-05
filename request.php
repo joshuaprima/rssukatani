@@ -33,7 +33,7 @@
                 <div class="form-group">
                   <label>Description</label>
                   <textarea class="form-control" name="ReqDesc" id="InvDesc" placeholder="Enter Item Description"
-                  maxlength="255" style="resize: vertical; min-height:75px;"></textarea>
+                  maxlength="255" style="resize: vertical; min-height:75px;" required></textarea>
                   <label id="lettersCount" class="pull-right" style="color: #d2d6de;"><label>
                 </div>      
             </div>
@@ -45,7 +45,7 @@
             </div>
         <div class="box-footer">
             <i class="fa fa-commenting pull-left"></i>
-            <small class="pull-left"> <i class="pull-left">Please download or print the transaction invoice after submitting the request. </i></small>
+            <small class="pull-left"> <i class="pull-left">Please download or print the request invoice after submitting the request. </i></small>
           <br>
         </div>
         </div>

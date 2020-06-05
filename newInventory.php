@@ -20,15 +20,15 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Item Name</label>
-                  <input type="text" class="form-control" name="InvName" placeholder="Enter Item Name">
+                  <input type="text" class="form-control" name="InvName" placeholder="Enter Item Name" required>
                 </div>
                 <div class="form-group">
                   <label for="InvDist">Distributor Name</label>
-                  <input type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name">
+                  <input type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" required>
                 </div>
                 <div class="form-group">
                   <label for="InvTypes">Item Types</label>
-                  <select class="form-control" name = "InvTypes">
+                  <select class="form-control" name = "InvTypes" required>
                     <option value="ATK">ATK</option>
                     <option value="Kebersihan">Kebersihan</option>
                     <option value="Cetakan">Cetakan</option>
@@ -49,7 +49,7 @@
             <div class="col-xs-3">
                 <div class="form-group">
                 <label for="Invmeasurement">Measurement / Satuan</label>
-                <select class="form-control" name = "InvMeasurement">
+                <select class="form-control" name = "InvMeasurement" required>
                     <option value="Pcs">Pcs</option>
                     <option value="Box">Box</option>
                     <option value="Lab">Pack</option>
@@ -65,14 +65,14 @@
                 <div class="form-group">
                   <label>Item Description</label>
                   <textarea class="form-control" name="InvDesc" id="InvDesc" placeholder="Enter Item Description"
-                  maxlength="2000" style="resize: vertical; min-height:75px;"></textarea>
+                  maxlength="2000" style="resize: vertical; min-height:75px;" required></textarea>
                   <label id="lettersCount" class="pull-right" style="color: #d2d6de;"><label>
                 </div>
                 <div class="form-group">
                   <label>Item Price</label>
                     <div class="input-group">
                         <span class="input-group-addon">IDR</span>
-                            <input type="Number" name="InvPrice" class="form-control">
+                            <input type="Number" required name="InvPrice" class="form-control">
                         <span class="input-group-addon">,00</span>
                     </div>
                 </div> 
@@ -82,7 +82,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask>
+                        <input type="text" required class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask>
                     </div>
                 </div>
                 <div class="form-group">

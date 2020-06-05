@@ -6,5 +6,4 @@
     $query = "SELECT  *  FROM  barang Where idbarang='$invID'";
     $sql = mysqli_query($con, $query);
     $data = mysqli_fetch_array($sql);
-    echo $data['deskripsi'];
 ?>

@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="Quantity">Jumlah Barang Keluar</label>
-                    <input type="Number" class="form-control" name="reqOut" id="reqOut" placeholder="Enter Amount" min="1" max="<?php echo $data['quantity'];?>">
+                    <input type="Number" class="form-control" name="reqOut" id="reqOut" placeholder="Enter Amount" min="1" max="<?php echo $data['quantity'];?>" required>
                 </div>
                 <div class="form-group">
                   <label>Description</label>

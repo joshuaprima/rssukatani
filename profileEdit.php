@@ -21,7 +21,7 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="EmpName">Employee Name</label>
-                  <input type="text" class="form-control" name="EmpName" placeholder="Enter Full Name" value="<?php echo $data['nama_pegawai'];?>">
+                  <input type="text" class="form-control" name="EmpName" placeholder="Enter Full Name" value="<?php echo $data['nama_pegawai'];?>" required>
                 </div>
                 <div class="form-group">
                   <label for="EmpName">Current Department</label>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                   <label for="UserName">Username</label>
-                  <input type="text" class="form-control" name="UserName" placeholder="Enter Username" value="<?php echo $data['username'];?>">
+                  <input type="text" class="form-control" name="UserName" placeholder="Enter Username" value="<?php echo $data['username'];?>" required>
                 </div>
                 <div class="form-group">
                   <label for="UserPassword">New Password</label>
@@ -61,7 +61,7 @@
               </div>
               <div class="modal-body">
               <label for="CurrPass">User Verification</label>
-              <input type="password" class="form-control" name="CurrPass" placeholder="Enter Current Password to Confirm Changes" value="">
+              <input type="password" class="form-control" name="CurrPass" placeholder="Enter Current Password to Confirm Changes" value="" required>
                 <p>The user data will be changed in the database. Please check if all the user's data is correct, and fill the current password</p>
               </div>
               <div class="modal-footer">

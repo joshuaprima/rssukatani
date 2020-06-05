@@ -20,11 +20,11 @@
             <div class="box-body">
             <div class="form-group">
                   <label for="EmpName">Employee Name</label>
-                  <input type="text" class="form-control" name="EmpName" placeholder="Enter Full Name">
+                  <input type="text" class="form-control" name="EmpName" placeholder="Enter Full Name" required>
                 </div>
                 <div class="form-group">
                   <label for="EmpName">Unit/Department</label>
-                  <select class="form-control" name = "DeptUnit">
+                  <select class="form-control" name = "DeptUnit" required>
                     <option value="Gudang Umum">Gudang Umum</option>
                     <option value="Poli Gigi">Poli Gigi</option>
                     <option value="Lab">Lab</option>
@@ -43,11 +43,11 @@
                 </div>
                 <div class="form-group">
                   <label for="UserName">Username</label>
-                  <input type="text" class="form-control" name="UserName" placeholder="Enter Username">
+                  <input type="text" class="form-control" name="UserName" placeholder="Enter Username" required>
                 </div>
                 <div class="form-group">
                   <label for="UserPassword">Password</label>
-                  <input type="password" class="form-control" name="UserPassword" placeholder="Password">
+                  <input type="password" class="form-control" name="UserPassword" placeholder="Password" required>
                 </div>        
             </div>
             <div class="box-footer">

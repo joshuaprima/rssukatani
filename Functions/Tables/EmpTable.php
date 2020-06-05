@@ -21,7 +21,7 @@
                   echo"<td>".$data['username']."</td>";
                   echo"<td>".$data['unit']."</td>";
                   echo "<td><a class='btn btn-block btn-warning' href= 'employeeEdit.php?id=".$data['idpegawai']."'>Edit</a>
-                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion');\" href='Functions/DeleteEmployee.php?id=".$data['idpegawai']."'>Delete</a></td>";
+                  <a class='btn btn-block btn-danger' onClick=\"javascript: return confirm('Please confirm deletion. Deleting employee data might affect the Log, make sure backup all data before deleting');\" href='Functions/DeleteEmployee.php?id=".$data['idpegawai']."'>Delete</a></td>";
                   echo"</tr>";
             }
             ?> 

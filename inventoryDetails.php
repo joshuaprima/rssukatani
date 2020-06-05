@@ -22,11 +22,11 @@
           <div class="box-body">
             <div class="form-group">
                   <label for="InvName">Item Name</label>
-                  <input id="nama" class="form-control" name="InvName" placeholder="Enter Item Name" value="<?php echo $data['nama'];?>" disabled="disabled">
+                  <input id="nama" class="form-control" name="InvName" placeholder="Enter Item Name" value="<?php echo $data['nama'];?>" disabled="disabled" required>
             </div>
             <div class="form-group">
                   <label for="InvDist">Distributor Name</label>
-                  <input id="distributor" type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" value="<?php echo $data['distributor'];?>" disabled="disabled" >
+                  <input id="distributor" type="text" class="form-control" name="InvDist" placeholder="Enter Distributor Name" value="<?php echo $data['distributor'];?>" disabled="disabled" required>
             </div>
             <div class="form-group">
                   <label for="InvTypes">Item Types</label>
@@ -45,7 +45,7 @@
             <div class="col-xs-6">
                 <div class="form-group">
                 <label for="InvQty">Quantity</label>
-                  <input id="quantity" type="Number" class="form-control" name="InvQty" placeholder="Enter Quantity" value="<?php echo $data['quantity'];?>" disabled="disabled">
+                  <input id="quantity" type="Number" class="form-control" name="InvQty" placeholder="Enter Quantity" value="<?php echo $data['quantity'];?>" disabled="disabled" required>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -67,14 +67,14 @@
                 <div class="form-group">
                   <label>Item Description</label>
                   <textarea id="deskripsi" class="form-control" name="InvDesc" id="InvDesc" placeholder="Enter Item Description"
-                  maxlength="2000" style="resize: vertical; min-height:75px;" disabled="disabled"> <?php echo $data['deskripsi'];?> </textarea>
+                  maxlength="2000" style="resize: vertical; min-height:75px;" disabled="disabled" required> <?php echo $data['deskripsi'];?> </textarea>
                   <label id="lettersCount" class="pull-right" style="color: #d2d6de;"><label>
                 </div>
                 <div class="form-group">
                   <label>Item Price</label>
                     <div class="input-group">
                         <span class="input-group-addon">IDR</span>
-                            <input id="harga" type="Number" name="InvPrice" class="form-control" value="<?php echo $data['harga_satuan'];?>" disabled="disabled">
+                            <input id="harga" type="Number" name="InvPrice" class="form-control" value="<?php echo $data['harga_satuan'];?>" disabled="disabled" required>
                         <span class="input-group-addon">,00</span>
                     </div>
                 </div> 
@@ -84,7 +84,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input id="blud" type="text" class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" value="<?php echo $data['tanggal_blud'];?>" data-mask disabled="disabled">
+                        <input id="blud" type="text" class="form-control pull-right" id="InvBlud" name="InvBlud" data-inputmask="'alias': 'dd-mm-yyyy'" value="<?php echo $data['tanggal_blud'];?>" data-mask disabled="disabled" required>
                     </div>
                 </div>
                 <div class="form-group">

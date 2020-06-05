@@ -29,8 +29,8 @@
           Backup and Reset the data periodically to avoid insufficient memory.</p>
 
           <?php
-          echo "<a class='btn btn-block-sm btn-success' style='margin-right: 15px; margin-top: 15px;' onClick=\"javascript: return confirm('Please confirm backup');\" href='index.php'>Backup</a>";
-          echo "<a class='btn btn-block-sm btn-danger' style='margin-top: 15px;'onClick=\"javascript: return confirm ('Please backup before reset the data. Click OK to confirm reset');\" href=''>Reset</a>";
+          echo "<a class='btn btn-block-sm btn-success' style='margin-right: 15px; margin-top: 15px;' onClick=\"javascript: return confirm('Please confirm backup');\" href='Functions/exportItemLog.php'>Backup</a>";
+          echo "<a class='btn btn-block-sm btn-danger' style='margin-top: 15px;'onClick=\"javascript: return confirm ('Please backup before reset the data. Click OK to confirm reset');\" href='Functions/resetTransactionLog.php'>Reset</a>";
           ?>
         </div>
         </div>

@@ -1,11 +1,13 @@
 <?php 
+include 'sessions.php';
 require_once 'connection.php' ;
 include 'generateUUID.php' ;
 $con = getDB();
 $con2 = getDB(); 
 
 if(isset($_POST['submit'])) {
-    $empID = "1";
+    
+    $empID = $_SESSION['empID'];
     $uuid = gen_UUID();
     $item = $_POST['InvName'];
     $distributor = $_POST['InvDist'];
@@ -16,16 +18,21 @@ if(isset($_POST['submit'])) {
     $price = $_POST['InvPrice'];
     $blud = $_POST['InvBlud'];
     $customExp = $_POST['InvCustom'];
-    $deskripsi = "Example Description";
-    $status = "Added";
+    $deskripsi = "Penambahan item ".$types." baru: ".$item ." ".$quantity." ".$satuan.". BLUD ".$blud;
+    $status = "NEW";
     $expiredDate = date('Y-m-d ', strtotime('+1825 days'));
 
+    if($customExp == ""){
+      $customExp = date('Y-m-d ', strtotime('+1825 days'));
+    }else{
+
+    }
     $query = 
     "INSERT INTO barang (idbarang, nama, distributor, quantity,satuan,deskripsi,harga_satuan,tanggal_blud,cust_expired_date, expired_date, types)
     VALUES('$uuid','$item','$distributor','$quantity','$satuan','$desc','$price','$blud','$customExp','$expiredDate','$types')";
 
     $query2 = 
-    "INSERT INTO itemlog (idpegawai,idbarang,jumlah,deskripsi,status)
+    "INSERT INTO logbarang (idpegawai,idbarang,jumlah,deskripsi,status)
     VALUES('$empID','$uuid','$quantity','$deskripsi','$status')";
       
     $sql = mysqli_query($con,$query);
