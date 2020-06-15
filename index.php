@@ -22,7 +22,7 @@
           <div class="small-box bg-aqua">
             <div class="inner">
               <h3><?php 
-              $query = "SELECT * FROM permintaan" ;
+              $query = "SELECT * FROM barang" ;
               $sql   = mysqli_query($con,$query);
               $num_rows = mysqli_num_rows($sql);
               echo $num_rows;
@@ -41,7 +41,7 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3><?php 
-              $query = "SELECT * FROM permintaan" ;
+              $query = "SELECT * FROM permintaan where status='Waiting'" ;
               $sql   = mysqli_query($con,$query);
               $num_rows = mysqli_num_rows($sql);
               echo $num_rows;
