@@ -9,7 +9,8 @@ $empID = $_SESSION['empID'];
 $bludbefore = $data['tanggal_blud'];
 $quantity = $data['quantity'];
 $satuan = $data ['satuan'];
-$deskripsi = "Delete Item ".$data['nama']." ".$quantity." ".$satuan.". BLUD ".$bludbefore;
+$types = $data ['types'];
+$deskripsi = "Delete Item ".$types.": ".$data['nama']." ".$quantity." ".$satuan.". BLUD ".$bludbefore;
 $status = "DELETE";
 
 $query     = "DELETE FROM barang WHERE idbarang = '$id'";

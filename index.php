@@ -98,7 +98,7 @@
 		<!-- ./col -->
 		<div class="col-md-5">
           <!-- DONUT CHART -->
-          <div class="box box-danger" style="height: 361.71px;">
+          <div class="box box-success" style="height: 361.71px;">
             <div class="box-header with-border">
               <h3 class="box-title">Stored Items</h3>
               
@@ -126,6 +126,17 @@
 
         </div>
 	  </div>
+    <?php
+            if ($_SESSION['unit'] == "Administrator") {
+              include 'Functions/Tables/AlertTable.php';
+             }
+            if ($_SESSION['unit'] == "Gudang Umum") {
+              include 'Functions/Tables/AlertTable.php';
+             }
+            else {
+            }
+        ?>
+    
       <!-- /.row -->
       <!-- Main row -->
     </section>
@@ -332,6 +343,20 @@
       hideHover: 'auto'
     });
   });
+</script>
+<script>
+  $(function () {
+    $('#example1').DataTable({
+	order: [[0,'asc']],
+	   "columns": [
+    { "orderable": true},
+    { "orderable": true, "searchable": true },
+	{ "orderable": true, "searchable": true },
+    { "orderable": true, "searchable": true },
+    { "orderable": false, "searchable": false, "defaultContent": ""}
+  ]
+	  })
+  })
 </script>
   <!--End of Custom Scripts-->
   <?php include 'Fragment/footer.php'; ?>
