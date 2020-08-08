@@ -55,6 +55,11 @@
                     <option value="Lab">Pack</option>
                     <option value="Set">Set</option>
                     <option value="Derigen">Derigen</option>
+                    <option value="Galon">Galon</option>
+                    <option value="Test">Test</option>
+                    <option value="Tube">Tube</option>
+                    <option value="Kit">Kit</option>
+                    <option value="Bottle">Bottle</option>
                     <option value="Rim">Rim</option>
                     <option value="Roll">Roll</option>
                     <option value="Buku">Buku</option>
