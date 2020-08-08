@@ -43,6 +43,7 @@
     { "orderable": true, "searchable": true },
 	{ "orderable": true, "searchable": true },
     { "orderable": true, "searchable": true },
+    { "orderable": true, "searchable": true },
     { "orderable": false, "searchable": false, "defaultContent": ""}
   ]
 	  })

@@ -173,6 +173,17 @@
       },
       {
         value    : <?php 
+              $query = "SELECT * FROM barang where types='Kebersihan'" ;
+              $sql   = mysqli_query($con,$query);
+              $num_rows = mysqli_num_rows($sql);
+              echo $num_rows;
+              ?>,
+        color    : '#f67124',
+        highlight: '#f67124',
+        label    : 'Kebersihan'
+      },
+      {
+        value    : <?php 
               $query = "SELECT * FROM barang where types='BMHP'" ;
               $sql   = mysqli_query($con,$query);
               $num_rows = mysqli_num_rows($sql);
@@ -353,6 +364,8 @@
     { "orderable": true, "searchable": true },
 	{ "orderable": true, "searchable": true },
     { "orderable": true, "searchable": true },
+    { "orderable": true, "searchable": true },
+    { "orderable": false, "searchable": false, "defaultContent": ""},
     { "orderable": false, "searchable": false, "defaultContent": ""}
   ]
 	  })

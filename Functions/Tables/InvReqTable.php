@@ -5,6 +5,7 @@
                   <th>Item Name</th>
                   <th>Quantity</th>
                   <th>Satuan</th>
+                  <th>Types</th>
                   <th>Actions</th>
                 </tr>
                 </thead>
@@ -28,6 +29,7 @@
                               echo"<td>".$data['nama']."</td>";
                               echo"<td>".$data['quantity']."</td>";
                               echo"<td>".$data['satuan']."</td>";
+                              echo"<td>".$data['types']."</td>";
                               echo "<td><a class='btn btn-block btn-info' href='request.php?id=".$data['idbarang']."'>Request</a>";
                               echo"</tr>";
                           }
@@ -50,6 +52,7 @@
                               echo"<td>".$data['nama']."</td>";
                               echo"<td>".$data['quantity']."</td>";
                               echo"<td>".$data['satuan']."</td>";
+                              echo"<td>".$data['types']."</td>";
                               echo "<td><a class='btn btn-block btn-info' href='request.php?id=".$data['idbarang']."'>Request</a>";
                               echo"</tr>";
                           }
@@ -63,6 +66,7 @@
                   <th>Item Name</th>
 					        <th>Quantity</th>
 					        <th>Satuan</th>
+                  <th>Types</th>
                   <th>Actions</th>
                 </tr>
                 </tfoot>
