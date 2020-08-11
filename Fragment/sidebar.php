@@ -33,6 +33,7 @@
             <li><a href="inventoryList.php"><i class="fa fa-cubes"></i> Inventory List</a></li>
             <li><a href="requestManage.php"><i class="fa fa-folder"></i> Manage Request</a></li>
             <li><a href="transactionList.php"><i class="fa fa-folder"></i> Transaction List</a></li>
+            <li><a href="BackupInventory.php"><i class="fa fa-folder"></i> Item Reporting</a></li>
           </ul>
         </li>
         <li class="treeview">
